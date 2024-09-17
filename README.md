@@ -20,3 +20,7 @@ This is a mini guessing game built with [React Native](https://reactnative.dev/)
 - [React Native](https://reactnative.dev/)
 - [Expo](https://docs.expo.dev/)
 - [React Navigation](https://reactnavigation.org/)
+
+## License
+
+- [MIT](LICENSE.md)
