@@ -14,3 +14,9 @@ This is a mini guessing game built with [React Native](https://reactnative.dev/)
 4. Scan the QR code with the Expo Go app on your phone or run the app on an emulator
 5. Run `npm run ios` or `npm run android` to run the app on a simulator
 6. Enjoy the game!
+
+## Resources
+
+- [React Native](https://reactnative.dev/)
+- [Expo](https://docs.expo.dev/)
+- [React Navigation](https://reactnavigation.org/)
