@@ -4,8 +4,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import StartGameScreen from '@/screens/StartGameScreen'
 import GameScreen from '@/screens/GameScreen'
 import GameOverScreen from '@/screens/GameOverScreen'
+import { RootStackParams } from '@/types/screens'
 
-const Stack = createNativeStackNavigator()
+const Stack = createNativeStackNavigator<RootStackParams>()
 
 const screenOptions = {
   headerShown: false,

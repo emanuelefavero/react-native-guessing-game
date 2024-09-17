@@ -1,19 +1,19 @@
 import type { NativeStackScreenProps } from '@react-navigation/native-stack'
 
-export type RootStackParamList = {
+export type RootStackParams = {
   StartGame: undefined
   Game: undefined
   GameOver: undefined
 }
 
 export type StartGameScreenProps = NativeStackScreenProps<
-  RootStackParamList,
+  RootStackParams,
   'StartGame'
 >
 
-export type GameScreenProps = NativeStackScreenProps<RootStackParamList, 'Game'>
+export type GameScreenProps = NativeStackScreenProps<RootStackParams, 'Game'>
 
 export type GameOverScreenProps = NativeStackScreenProps<
-  RootStackParamList,
+  RootStackParams,
   'GameOver'
 >
