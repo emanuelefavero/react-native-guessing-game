@@ -12,8 +12,11 @@ This is a mini guessing game built with [React Native](https://reactnative.dev/)
 2. Run `npm install` to install the dependencies
 3. Run `npm start` to start the app
 4. Scan the QR code with the Expo Go app on your phone or run the app on an emulator
-5. Run `npm run ios` or `npm run android` to run the app on a simulator
-6. Enjoy the game!
+5. Run `i` to open the app on an iOS simulator or `a` to open the app on an Android emulator
+6. Run `r` to restart the app
+7. Enjoy the game!
+
+> Tip: If you prefer, you could also directly run the simulator by running `npm run ios` or `npm run android` instead of running `npm start`
 
 ## Resources
 
