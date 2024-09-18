@@ -4,7 +4,7 @@ import { GameOverScreenProps } from '@/types/screens'
 
 export default function GameOverScreen({ navigation }: GameOverScreenProps) {
   return (
-    <View style={globalStyles.container}>
+    <View style={globalStyles.screenContainer}>
       <Text>Game Over Screen</Text>
       <Button
         title='Restart Game'

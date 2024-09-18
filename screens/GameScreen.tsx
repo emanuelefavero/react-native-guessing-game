@@ -4,7 +4,7 @@ import { GameScreenProps } from '@/types/screens'
 
 export default function StartGameScreen({ navigation }: GameScreenProps) {
   return (
-    <View style={globalStyles.container}>
+    <View style={globalStyles.screenContainer}>
       <Text>Game Screen</Text>
       <Button
         title='Finish Game'
