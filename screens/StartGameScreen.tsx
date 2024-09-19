@@ -36,11 +36,3 @@ const styles = StyleSheet.create({
     maxWidth: 200,
   },
 })
-
-/*
-// TIP: How to add shadow to a component
-shadowColor: '#4c0519',
-shadowOffset: { width: 4, height: 4 },
-shadowOpacity: 1,
-shadowRadius: 0.5,
-*/

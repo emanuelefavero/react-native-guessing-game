@@ -19,6 +19,10 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     paddingVertical: 12,
     paddingHorizontal: 30,
+    shadowColor: '#4C0519',
+    shadowOffset: { width: 3, height: 3 },
+    shadowOpacity: 0.8,
+    shadowRadius: 0.5,
   },
   buttonText: {
     color: 'white',
