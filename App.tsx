@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import useLoadFonts from '@/hooks/useLoadFonts'
 import StartGameScreen from '@/screens/StartGameScreen'
 import GameScreen from '@/screens/GameScreen'
 import GameOverScreen from '@/screens/GameOverScreen'
@@ -13,6 +14,10 @@ const screenOptions = {
 }
 
 export default function App() {
+  const { loaded, error } = useLoadFonts()
+
+  if (!loaded || error) return null // show nothing while loading fonts
+
   return (
     <NavigationContainer>
       <StatusBar style='auto' translucent />
