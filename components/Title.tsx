@@ -1,9 +1,10 @@
+import { ReactNode } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-export default function Title() {
+export default function Title({ children }: { children: ReactNode }) {
   return (
     <View style={styles.titleContainer}>
-      <Text style={styles.title}>Guess My Number</Text>
+      <Text style={styles.title}>{children}</Text>
     </View>
   )
 }

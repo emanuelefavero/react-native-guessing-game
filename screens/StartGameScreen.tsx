@@ -24,7 +24,9 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
 
   return (
     <View style={globalStyles.screenContainer}>
-      <Title />
+      <Title>Guess My Number</Title>
+
+      {/* TODO: Separate input into its own component */}
       <TextInput
         value={inputNumber}
         onChangeText={(text) => setInputNumber(text.replace(/[^0-9]/g, ''))}
