@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   titleContainer: {
     width: '100%',
     maxWidth: 360,
-    marginBottom: 40,
+    marginBottom: 36,
   },
 
   title: {

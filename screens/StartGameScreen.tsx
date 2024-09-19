@@ -8,34 +8,39 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
   return (
     <View style={globalStyles.screenContainer}>
       <Title />
-      <View style={styles.inputContainer}>
-        <TextInput style={styles.input} />
-        <PrimaryButton>Reset</PrimaryButton>
-        <PrimaryButton>Confirm</PrimaryButton>
-        {/* <Button
+      <TextInput
+        style={styles.input}
+        placeholder='Type a number'
+        placeholderTextColor='#FDA4AF'
+      />
+
+      {/* <Button
           title='Start Game'
           onPress={() => navigation.navigate('Game')}
         /> */}
-      </View>
+
+      <PrimaryButton>Reset</PrimaryButton>
+      <PrimaryButton>Confirm</PrimaryButton>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  inputContainer: {
-    // padding: 16,
-    width: '100%',
-    maxWidth: 360,
-    // shadowColor: '#4c0519',
-    // shadowOffset: { width: 4, height: 4 },
-    // shadowOpacity: 1,
-    // shadowRadius: 0.5,
-  },
-
   input: {
-    height: 50,
-    fontSize: 32,
-    // borderBottomColor: '#FFE4E6',
-    borderBottomWidth: 1,
+    paddingVertical: 6,
+    fontSize: 30,
+    borderBottomColor: '#FFE4E6',
+    color: '#FFE4E6',
+    borderBottomWidth: 1.2,
+    marginBottom: 20,
+    maxWidth: 200,
   },
 })
+
+/*
+// TIP: How to add shadow to a component
+shadowColor: '#4c0519',
+shadowOffset: { width: 4, height: 4 },
+shadowOpacity: 1,
+shadowRadius: 0.5,
+*/
