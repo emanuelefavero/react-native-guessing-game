@@ -7,7 +7,7 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
   return (
     <View style={globalStyles.screenContainer}>
       <View style={styles.inputContainer}>
-        <TextInput />
+        <TextInput style={styles.input} />
         <PrimaryButton>Reset</PrimaryButton>
         <PrimaryButton>Confirm</PrimaryButton>
         {/* <Button title='Start Game' onPress={() => navigation.navigate('Game')} /> */}
@@ -18,14 +18,19 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
 
 const styles = StyleSheet.create({
   inputContainer: {
-    padding: 16,
-    backgroundColor: '#9f1239',
-    borderRadius: 10,
+    // padding: 16,
     width: '100%',
     maxWidth: 360,
-    shadowColor: '#4c0519',
-    shadowOffset: { width: 4, height: 4 },
-    shadowOpacity: 1,
-    shadowRadius: 0.5,
+    // shadowColor: '#4c0519',
+    // shadowOffset: { width: 4, height: 4 },
+    // shadowOpacity: 1,
+    // shadowRadius: 0.5,
+  },
+
+  input: {
+    height: 50,
+    fontSize: 32,
+    // borderBottomColor: '#FFE4E6',
+    borderBottomWidth: 1,
   },
 })
