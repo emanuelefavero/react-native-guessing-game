@@ -2,10 +2,12 @@ import { View, Button, TextInput, StyleSheet } from 'react-native'
 import { globalStyles } from '@/styles/globalStyles'
 import { StartGameScreenProps } from '@/types/screens'
 import PrimaryButton from '@/components/PrimaryButton'
+import Title from '@/components/Title'
 
 export default function StartGameScreen({ navigation }: StartGameScreenProps) {
   return (
     <View style={globalStyles.screenContainer}>
+      <Title />
       <View style={styles.inputContainer}>
         <TextInput style={styles.input} />
         <PrimaryButton>Reset</PrimaryButton>
