@@ -1,15 +1,21 @@
-import { View, TextInput, StyleSheet } from 'react-native'
+import { useState } from 'react'
+import { View, TextInput, StyleSheet, Text } from 'react-native'
 import { globalStyles } from '@/styles/globalStyles'
 import { StartGameScreenProps } from '@/types/screens'
 import PrimaryButton from '@/components/PrimaryButton'
 import Title from '@/components/Title'
 
 export default function StartGameScreen({ navigation }: StartGameScreenProps) {
+  const [inputNumber, setInputNumber] = useState('')
+
   return (
     <View style={globalStyles.screenContainer}>
       <Title />
       <TextInput
+        value={inputNumber}
+        onChangeText={(text) => setInputNumber(text.replace(/[^0-9]/g, ''))}
         style={styles.input}
+        keyboardType='numeric'
         placeholder='Type a number'
         placeholderTextColor='#FDA4AF'
       />
@@ -32,13 +38,13 @@ const styles = StyleSheet.create({
     color: '#FFE4E6',
     borderBottomWidth: 1.2,
     marginBottom: 30,
-    maxWidth: 200,
+    maxWidth: 215,
   },
 
   buttonsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '100%',
-    maxWidth: 280,
+    maxWidth: 285,
   },
 })
