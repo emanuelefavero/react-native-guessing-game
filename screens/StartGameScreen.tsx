@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { View, TextInput, StyleSheet, Text } from 'react-native'
+import { View, TextInput, StyleSheet } from 'react-native'
 import { globalStyles } from '@/styles/globalStyles'
 import { StartGameScreenProps } from '@/types/screens'
 import PrimaryButton from '@/components/PrimaryButton'
