@@ -22,7 +22,7 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
       />
 
       <View style={styles.buttonsContainer}>
-        <PrimaryButton>Reset</PrimaryButton>
+        <PrimaryButton onPress={() => setInputNumber('')}>Reset</PrimaryButton>
         <PrimaryButton onPress={() => navigation.navigate('Game')}>
           Confirm
         </PrimaryButton>
