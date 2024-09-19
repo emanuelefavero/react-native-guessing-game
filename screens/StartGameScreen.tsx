@@ -14,13 +14,15 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
         placeholderTextColor='#FDA4AF'
       />
 
+      <View style={styles.buttonsContainer}>
+        <PrimaryButton>Reset</PrimaryButton>
+        <PrimaryButton>Confirm</PrimaryButton>
+      </View>
+
       {/* <Button
           title='Start Game'
           onPress={() => navigation.navigate('Game')}
         /> */}
-
-      <PrimaryButton>Reset</PrimaryButton>
-      <PrimaryButton>Confirm</PrimaryButton>
     </View>
   )
 }
@@ -32,7 +34,14 @@ const styles = StyleSheet.create({
     borderBottomColor: '#FFE4E6',
     color: '#FFE4E6',
     borderBottomWidth: 1.2,
-    marginBottom: 20,
+    marginBottom: 30,
     maxWidth: 200,
+  },
+
+  buttonsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    maxWidth: 280,
   },
 })
