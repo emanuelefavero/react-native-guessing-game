@@ -16,13 +16,10 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
 
       <View style={styles.buttonsContainer}>
         <PrimaryButton>Reset</PrimaryButton>
-        <PrimaryButton>Confirm</PrimaryButton>
+        <PrimaryButton onPress={() => navigation.navigate('Game')}>
+          Confirm
+        </PrimaryButton>
       </View>
-
-      {/* <Button
-          title='Start Game'
-          onPress={() => navigation.navigate('Game')}
-        /> */}
     </View>
   )
 }

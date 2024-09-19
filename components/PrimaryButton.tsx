@@ -1,8 +1,14 @@
 import { Pressable, Text, StyleSheet } from 'react-native'
 
-export default function PrimaryButton({ children }: { children: string }) {
+interface Props {
+  children: string
+  onPress?: () => void
+}
+
+export default function PrimaryButton({ children, onPress }: Props) {
   return (
     <Pressable
+      onPress={onPress}
       style={({ pressed }) => [
         styles.button,
         { transform: [{ scale: pressed ? 0.95 : 1 }] },
