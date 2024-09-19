@@ -15,7 +15,7 @@ const screenOptions = {
 export default function App() {
   return (
     <NavigationContainer>
-      <StatusBar style='auto' />
+      <StatusBar style='auto' translucent />
       <Stack.Navigator>
         <Stack.Screen
           name='StartGame'

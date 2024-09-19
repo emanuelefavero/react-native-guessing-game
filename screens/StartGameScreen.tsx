@@ -10,7 +10,10 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
         <TextInput style={styles.input} />
         <PrimaryButton>Reset</PrimaryButton>
         <PrimaryButton>Confirm</PrimaryButton>
-        {/* <Button title='Start Game' onPress={() => navigation.navigate('Game')} /> */}
+        {/* <Button
+          title='Start Game'
+          onPress={() => navigation.navigate('Game')}
+        /> */}
       </View>
     </View>
   )

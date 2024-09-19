@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native'
 export const globalStyles = StyleSheet.create({
   screenContainer: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#BE123C',
     alignItems: 'center',
     // justifyContent: 'flex-start',
     paddingHorizontal: 20,
