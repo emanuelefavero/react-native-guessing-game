@@ -16,6 +16,7 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
         onChangeText={(text) => setInputNumber(text.replace(/[^0-9]/g, ''))}
         style={styles.input}
         keyboardType='numeric'
+        keyboardAppearance='dark'
         placeholder='Type a number'
         placeholderTextColor='#FDA4AF'
       />
