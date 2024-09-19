@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native'
 export default function Title() {
   return (
     <View style={styles.titleContainer}>
-      <Text style={styles.title}>Guess the number</Text>
+      <Text style={styles.title}>Guess My Number</Text>
     </View>
   )
 }
