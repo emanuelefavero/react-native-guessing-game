@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
@@ -15,6 +16,9 @@ const screenOptions = {
 }
 
 export default function App() {
+  // TODO Create a game state context with "start", "playing" and "over" as values, remove navigation buttons
+  const [gameState, setGameState] = useState('start')
+
   const { loaded, error } = useLoadFonts()
 
   if (!loaded || error) return null // show nothing while loading fonts
@@ -24,21 +28,29 @@ export default function App() {
       <NavigationContainer>
         <StatusBar style='auto' translucent />
         <Stack.Navigator>
-          <Stack.Screen
-            name='StartGame'
-            component={StartGameScreen}
-            options={{ ...screenOptions, title: 'Start Game' }}
-          />
-          <Stack.Screen
-            name='Game'
-            component={GameScreen}
-            options={{ ...screenOptions, title: 'Game' }}
-          />
-          <Stack.Screen
-            name='GameOver'
-            component={GameOverScreen}
-            options={{ ...screenOptions, title: 'Game Over' }}
-          />
+          {gameState === 'start' && (
+            <Stack.Screen
+              name='StartGame'
+              component={StartGameScreen}
+              options={{ ...screenOptions, title: 'Start Game' }}
+            />
+          )}
+
+          {gameState === 'playing' && (
+            <Stack.Screen
+              name='Game'
+              component={GameScreen}
+              options={{ ...screenOptions, title: 'Game' }}
+            />
+          )}
+
+          {gameState === 'over' && (
+            <Stack.Screen
+              name='GameOver'
+              component={GameOverScreen}
+              options={{ ...screenOptions, title: 'Game Over' }}
+            />
+          )}
         </Stack.Navigator>
       </NavigationContainer>
     </NumberProvider>
