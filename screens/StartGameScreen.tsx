@@ -2,14 +2,12 @@ import { useState } from 'react'
 import { View, TextInput, StyleSheet, Text } from 'react-native'
 import { globalStyles } from '@/styles/globalStyles'
 import { useNumberDispatch } from '@/context/NumberContext'
-import { useGameDispatch } from '@/context/GameStateContext'
 import { StartGameScreenProps } from '@/types/screens'
 import PrimaryButton from '@/components/PrimaryButton'
 import Title from '@/components/Title'
 
 export default function StartGameScreen({ navigation }: StartGameScreenProps) {
   const numberDispatch = useNumberDispatch()
-  const gameDispatch = useGameDispatch()
   const [inputNumber, setInputNumber] = useState('')
 
   const handleConfirm = () => {
@@ -21,7 +19,7 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
     if (parseInt(inputNumber) % 1 !== 0) return
 
     numberDispatch({ type: 'setNumber', payload: parseInt(inputNumber) })
-    gameDispatch({ type: 'setGameState', payload: 'playing' })
+    navigation.navigate('Game')
   }
 
   return (
