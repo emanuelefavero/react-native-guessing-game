@@ -7,7 +7,7 @@ import PrimaryButton from '@/components/PrimaryButton'
 import Title from '@/components/Title'
 
 export default function StartGameScreen({ navigation }: StartGameScreenProps) {
-  const dispatch = useNumberDispatch()
+  const numberDispatch = useNumberDispatch()
   const [inputNumber, setInputNumber] = useState('')
 
   const handleConfirm = () => {
@@ -18,7 +18,7 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
     if (isNaN(parseInt(inputNumber))) return
     if (parseInt(inputNumber) % 1 !== 0) return
 
-    dispatch({ type: 'setNumber', payload: parseInt(inputNumber) })
+    numberDispatch({ type: 'setNumber', payload: parseInt(inputNumber) })
     navigation.navigate('Game')
   }
 
