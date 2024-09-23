@@ -16,6 +16,10 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
   const { inputNumber } = useInputNumber()
   const inputNumberDispatch = useInputNumberDispatch()
 
+  const resetInput = () => {
+    inputNumberDispatch({ type: 'setInputNumber', payload: '' })
+  }
+
   const handleConfirm = () => {
     // Validate input
     // TODO: Add a toast message for invalid input
@@ -25,6 +29,7 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
     if (parseInt(inputNumber) % 1 !== 0) return
 
     numberDispatch({ type: 'setNumber', payload: parseInt(inputNumber) })
+    resetInput()
     navigation.navigate('Game')
   }
 
@@ -35,13 +40,7 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
       <Input />
 
       <ButtonsContainer>
-        <PrimaryButton
-          onPress={() => {
-            inputNumberDispatch({ type: 'setInputNumber', payload: '' })
-          }}
-        >
-          Reset
-        </PrimaryButton>
+        <PrimaryButton onPress={() => resetInput()}>Reset</PrimaryButton>
 
         <PrimaryButton onPress={handleConfirm}>Confirm</PrimaryButton>
       </ButtonsContainer>
