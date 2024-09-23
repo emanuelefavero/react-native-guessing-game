@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { View, TextInput, StyleSheet, Text } from 'react-native'
+import { View } from 'react-native'
 import { globalStyles } from '@/styles/globalStyles'
 import { useNumberDispatch } from '@/context/NumberContext'
 import { StartGameScreenProps } from '@/types/screens'
@@ -37,15 +37,3 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  input: {
-    paddingVertical: 6,
-    fontSize: 30,
-    borderBottomColor: '#FFE4E6',
-    color: '#FFE4E6',
-    borderBottomWidth: 1.2,
-    marginBottom: 30,
-    maxWidth: 215,
-  },
-})
