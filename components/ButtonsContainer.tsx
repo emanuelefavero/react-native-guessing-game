@@ -15,5 +15,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '100%',
     maxWidth: 285,
+    marginBottom: 36,
   },
 })
