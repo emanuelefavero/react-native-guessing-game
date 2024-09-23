@@ -10,6 +10,7 @@ export default function StartGameScreen({ navigation }: GameScreenProps) {
       <Title>
         Is your number lower or higher than <GuessedNumber />?
       </Title>
+
       <Button
         title='Finish Game'
         onPress={() => navigation.navigate('GameOver')}

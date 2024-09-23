@@ -5,6 +5,7 @@ import { useNumberDispatch } from '@/context/NumberContext'
 import { StartGameScreenProps } from '@/types/screens'
 import PrimaryButton from '@/components/PrimaryButton'
 import Title from '@/components/Title'
+import ButtonsContainer from '@/components/ButtonsContainer'
 
 export default function StartGameScreen({ navigation }: StartGameScreenProps) {
   const dispatch = useNumberDispatch()
@@ -37,10 +38,10 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
         placeholderTextColor='#FDA4AF'
       />
 
-      <View style={styles.buttonsContainer}>
+      <ButtonsContainer>
         <PrimaryButton onPress={() => setInputNumber('')}>Reset</PrimaryButton>
         <PrimaryButton onPress={handleConfirm}>Confirm</PrimaryButton>
-      </View>
+      </ButtonsContainer>
     </View>
   )
 }
@@ -54,12 +55,5 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1.2,
     marginBottom: 30,
     maxWidth: 215,
-  },
-
-  buttonsContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '100%',
-    maxWidth: 285,
   },
 })
