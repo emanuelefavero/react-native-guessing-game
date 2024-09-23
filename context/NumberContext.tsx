@@ -33,7 +33,7 @@ const initialState: NumberState = {
   number: 0,
 }
 
-const NumberContext = createContext<NumberContextType | undefined>(undefined) // !
+const NumberContext = createContext<NumberContextType | undefined>(undefined)
 const NumberDispatchContext = createContext<Dispatch<NumberAction> | undefined>(
   undefined
 )
@@ -55,7 +55,7 @@ export function useNumber() {
   if (context === undefined) {
     throw new Error('useNumber must be used within a NumberProvider')
   }
-  return context.state // !
+  return context.state
 }
 
 export function useNumberDispatch() {
