@@ -1,4 +1,4 @@
-import { Text, View, Button, StyleSheet } from 'react-native'
+import { View, Button } from 'react-native'
 import { globalStyles } from '@/styles/globalStyles'
 import { useNumber } from '@/context/NumberContext'
 import { GameScreenProps } from '@/types/screens'
