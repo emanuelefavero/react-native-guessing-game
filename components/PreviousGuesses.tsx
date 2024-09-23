@@ -4,8 +4,8 @@ import PreviousGuess from './PreviousGuess'
 
 export default function PreviousGuesses() {
   const previousGuesses = [
-    { id: '1', value: 50 },
-    { id: '2', value: 75 },
+    { id: '1', value: 50, sign: '-' },
+    { id: '2', value: 75, sign: '+' },
   ]
 
   return (
@@ -36,5 +36,6 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: 14,
+    marginBottom: 60,
   },
 })
