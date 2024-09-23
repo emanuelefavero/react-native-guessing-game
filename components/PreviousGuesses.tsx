@@ -1,7 +1,7 @@
 import { View, StyleSheet } from 'react-native'
-import ScrollCard from './ScrollCard'
-import PreviousGuessesTitle from './PreviousGuessesTitle'
-import PreviousGuess from './PreviousGuess'
+import ScrollCard from '@/components/ScrollCard'
+import PreviousGuessesTitle from '@/components/PreviousGuessesTitle'
+import PreviousGuess from '@/components/PreviousGuess'
 
 export default function PreviousGuesses() {
   const previousGuesses = [
