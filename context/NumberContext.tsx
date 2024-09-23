@@ -1,4 +1,3 @@
-// NumberContext.tsx
 import React, {
   createContext,
   useContext,

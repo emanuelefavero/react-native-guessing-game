@@ -1,15 +1,22 @@
 import { TextInput, StyleSheet } from 'react-native'
+import {
+  useInputNumber,
+  useInputNumberDispatch,
+} from '@/context/InputNumberContext'
 
-interface Props {
-  inputNumber: string
-  onChangeText: (text: string) => void
-}
+export default function Input() {
+  const { inputNumber } = useInputNumber()
+  const inputNumberDispatch = useInputNumberDispatch()
 
-export default function Input({ inputNumber, onChangeText }: Props) {
   return (
     <TextInput
       value={inputNumber}
-      onChangeText={onChangeText}
+      onChangeText={(text) =>
+        inputNumberDispatch({
+          type: 'setInputNumber',
+          payload: text.replace(/[^0-9]/g, ''),
+        })
+      }
       style={styles.input}
       keyboardType='numeric'
       keyboardAppearance='dark'
