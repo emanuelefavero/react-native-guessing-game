@@ -12,6 +12,7 @@ export default function PreviousGuesses() {
   return (
     <ScrollCard>
       <PreviousGuessesTitle />
+
       <View style={styles.container}>
         {previousGuesses.map((item) => (
           <PreviousGuess key={item.id} item={item} />
