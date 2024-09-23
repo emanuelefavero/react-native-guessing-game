@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, StyleSheet, FlatList } from 'react-native'
+import PreviousGuessesTitle from './PreviousGuessesTitle'
 
 export default function PreviousGuesses() {
   const previousGuesses = [
@@ -16,11 +17,7 @@ export default function PreviousGuesses() {
         <Text style={styles.previousGuess}>{item.value}</Text>
       )}
       keyExtractor={(item) => item.id.toString()}
-      ListHeaderComponent={
-        <Text style={styles.title}>
-          Guesses: <Text style={styles.numberOfGuesses}>3</Text>
-        </Text>
-      }
+      ListHeaderComponent={<PreviousGuessesTitle />}
     />
   )
 }
@@ -34,18 +31,6 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     paddingVertical: 48,
     marginBottom: 12,
-  },
-
-  title: {
-    color: '#FFE4E6',
-    fontSize: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 24,
-  },
-
-  numberOfGuesses: {
-    color: '#FDE047',
   },
 
   previousGuess: {
