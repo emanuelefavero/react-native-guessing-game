@@ -5,7 +5,7 @@ import ScrollCard from '@/components/ScrollCard'
 export default function PreviousGuesses() {
   return (
     <ScrollCard>
-      <Text style={styles.previousGuessesTitle}>
+      <Text style={styles.title}>
         Guesses: <Text style={styles.numberOfGuesses}>3</Text>
       </Text>
     </ScrollCard>
@@ -13,7 +13,7 @@ export default function PreviousGuesses() {
 }
 
 const styles = StyleSheet.create({
-  previousGuessesTitle: {
+  title: {
     color: '#FFE4E6',
     fontSize: 24,
     fontWeight: 'bold',
