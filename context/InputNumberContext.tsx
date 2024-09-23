@@ -11,7 +11,7 @@ type inputNumberState = {
 }
 
 type inputNumberAction = {
-  type: 'setInputNumber' | 'resetInputNumber'
+  type: 'setInputNumber' | 'reset'
   payload?: string
 }
 
@@ -27,7 +27,7 @@ function inputNumberReducer(
   switch (action.type) {
     case 'setInputNumber':
       return { inputNumber: action.payload || '' }
-    case 'resetInputNumber':
+    case 'reset':
       return { inputNumber: '' }
     default:
       return state

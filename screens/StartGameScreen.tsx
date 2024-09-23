@@ -17,7 +17,7 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
   const inputNumberDispatch = useInputNumberDispatch()
 
   const resetInput = () => {
-    inputNumberDispatch({ type: 'resetInputNumber' })
+    inputNumberDispatch({ type: 'reset' })
   }
 
   const handleConfirm = () => {
