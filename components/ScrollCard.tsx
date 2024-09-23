@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { View, ScrollView, StyleSheet } from 'react-native'
+import { ScrollView, StyleSheet } from 'react-native'
 
 export default function ScrollCard({ children }: { children: ReactNode }) {
   return (

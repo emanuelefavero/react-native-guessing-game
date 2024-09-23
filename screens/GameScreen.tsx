@@ -23,7 +23,6 @@ export default function StartGameScreen({ navigation }: GameScreenProps) {
       </ButtonsContainer>
 
       <PreviousGuesses />
-
       <Button
         title='Finish Game'
         onPress={() => navigation.navigate('GameOver')}

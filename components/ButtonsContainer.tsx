@@ -1,10 +1,10 @@
-import React from 'react'
+import { ReactNode } from 'react'
 import { View, StyleSheet } from 'react-native'
 
 export default function ButtonsContainer({
   children,
 }: {
-  children: React.ReactNode
+  children: ReactNode
 }) {
   return <View style={styles.buttonsContainer}>{children}</View>
 }

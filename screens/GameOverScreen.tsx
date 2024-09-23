@@ -6,6 +6,7 @@ export default function GameOverScreen({ navigation }: GameOverScreenProps) {
   return (
     <View style={globalStyles.screenContainer}>
       <Text>Game Over Screen</Text>
+
       <Button
         title='Restart Game'
         onPress={() => navigation.navigate('StartGame')}
