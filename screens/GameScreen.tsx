@@ -9,7 +9,7 @@ export default function StartGameScreen({ navigation }: GameScreenProps) {
 
   return (
     <View style={globalStyles.screenContainer}>
-      <Title>Your number is {number}</Title>
+      <Title>Is your number lower or higher than {number}?</Title>
       <Button
         title='Finish Game'
         onPress={() => navigation.navigate('GameOver')}

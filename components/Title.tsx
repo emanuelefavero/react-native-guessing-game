@@ -1,10 +1,24 @@
 import { ReactNode } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-export default function Title({ children }: { children: ReactNode }) {
+interface Props {
+  children: ReactNode
+  fontSize?: number
+}
+
+export default function Title({ children, fontSize }: Props) {
   return (
     <View style={styles.titleContainer}>
-      <Text style={styles.title}>{children}</Text>
+      <Text
+        style={[
+          styles.title,
+          {
+            fontSize: fontSize || 54,
+          },
+        ]}
+      >
+        {children}
+      </Text>
     </View>
   )
 }
@@ -19,7 +33,6 @@ const styles = StyleSheet.create({
   title: {
     color: '#FFE4E6',
     fontFamily: 'Lobster',
-    fontSize: 54,
     fontWeight: 'bold',
     textAlign: 'center',
   },
