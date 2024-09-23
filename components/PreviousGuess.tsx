@@ -44,12 +44,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#A16207',
     borderColor: 'rgba(234, 178, 8, 0.7)',
     borderWidth: 1.1,
-    shadowColor: '#4C0519',
+    shadowColor: 'rgba(76, 5, 25, 0.6)',
     shadowOffset: {
       width: 1,
       height: 2,
     },
-    shadowOpacity: 0.6,
+    shadowOpacity: 1,
     shadowRadius: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -64,5 +64,11 @@ const styles = StyleSheet.create({
   sign: {
     fontSize: 24,
     fontWeight: 'bold',
+    textShadowColor: 'rgba(76, 5, 25, 0.6)',
+    textShadowOffset: {
+      width: 1,
+      height: 2,
+    },
+    textShadowRadius: 0.5,
   },
 })
