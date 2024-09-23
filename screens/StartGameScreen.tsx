@@ -6,6 +6,7 @@ import { StartGameScreenProps } from '@/types/screens'
 import PrimaryButton from '@/components/PrimaryButton'
 import Title from '@/components/Title'
 import ButtonsContainer from '@/components/ButtonsContainer'
+import Input from '@/components/Input'
 
 export default function StartGameScreen({ navigation }: StartGameScreenProps) {
   const dispatch = useNumberDispatch()
@@ -27,16 +28,7 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
     <View style={globalStyles.screenContainer}>
       <Title>Guess My Number</Title>
 
-      {/* TODO: Separate input into its own component */}
-      <TextInput
-        value={inputNumber}
-        onChangeText={(text) => setInputNumber(text.replace(/[^0-9]/g, ''))}
-        style={styles.input}
-        keyboardType='numeric'
-        keyboardAppearance='dark'
-        placeholder='Type a number'
-        placeholderTextColor='#FDA4AF'
-      />
+      <Input onChangeText={setInputNumber} inputNumber={inputNumber} />
 
       <ButtonsContainer>
         <PrimaryButton onPress={() => setInputNumber('')}>Reset</PrimaryButton>
