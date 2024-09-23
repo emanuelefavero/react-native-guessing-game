@@ -11,7 +11,7 @@ type NumberState = {
 }
 
 type NumberAction = {
-  type: 'setNumber'
+  type: 'set'
   payload: number
 }
 
@@ -22,7 +22,7 @@ type NumberContextType = {
 
 function numberReducer(state: NumberState, action: NumberAction): NumberState {
   switch (action.type) {
-    case 'setNumber':
+    case 'set':
       return { number: action.payload }
     default:
       return state
@@ -70,4 +70,4 @@ export function useNumberDispatch() {
 // import { useNumber, useNumberDispatch } from '@/context/NumberContext'
 // const { number } = useNumber()
 // const dispatch = useNumberDispatch()
-// dispatch({ type: 'setNumber', payload: 10 })
+// dispatch({ type: 'set', payload: 10 })
