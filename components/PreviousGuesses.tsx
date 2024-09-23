@@ -1,4 +1,3 @@
-import React from 'react'
 import { Text, StyleSheet, FlatList } from 'react-native'
 import PreviousGuessesTitle from './PreviousGuessesTitle'
 
