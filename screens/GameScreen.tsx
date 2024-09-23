@@ -1,4 +1,4 @@
-import { View, Button } from 'react-native'
+import { View, Button, StyleSheet } from 'react-native'
 import { globalStyles } from '@/styles/globalStyles'
 import { GameScreenProps } from '@/types/screens'
 import Title from '@/components/Title'
@@ -21,10 +21,23 @@ export default function StartGameScreen({ navigation }: GameScreenProps) {
         <PrimaryButton onPress={() => alert('higher')}>Higher</PrimaryButton>
       </ButtonsContainer>
 
-      <Button
-        title='Finish Game'
-        onPress={() => navigation.navigate('GameOver')}
-      />
+      <View style={styles.previousGuesses}>
+        <Button
+          title='Finish Game'
+          onPress={() => navigation.navigate('GameOver')}
+        />
+      </View>
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  previousGuesses: {
+    width: '100%',
+    backgroundColor: 'rgba(76, 5, 25, 0.1)',
+    borderColor: 'rgba(76, 5, 25, 0.2)',
+    borderWidth: 1.2,
+    borderRadius: 16,
+    paddingVertical: 32,
+  },
+})

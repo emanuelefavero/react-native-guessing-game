@@ -1,4 +1,4 @@
-import { View } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import { globalStyles } from '@/styles/globalStyles'
 import { useNumberDispatch } from '@/context/NumberContext'
 import {
@@ -42,6 +42,7 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
         >
           Reset
         </PrimaryButton>
+
         <PrimaryButton onPress={handleConfirm}>Confirm</PrimaryButton>
       </ButtonsContainer>
     </View>
