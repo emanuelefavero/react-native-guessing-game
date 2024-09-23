@@ -13,6 +13,9 @@ export default function StartGameScreen({ navigation }: GameScreenProps) {
         Is your number lower or higher than <GuessedNumber />?
       </Title>
 
+      {/* Add some space between the title and the buttons to make StartGameScreen and GameScreen buttons position consistent */}
+      <View style={{ marginBottom: 12 }} />
+
       <ButtonsContainer>
         <PrimaryButton onPress={() => alert('lower')}>Lower</PrimaryButton>
         <PrimaryButton onPress={() => alert('higher')}>Higher</PrimaryButton>
