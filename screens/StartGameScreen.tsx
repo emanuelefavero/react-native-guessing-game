@@ -28,7 +28,7 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
     if (isNaN(parseInt(inputNumber))) return
     if (parseInt(inputNumber) % 1 !== 0) return
 
-    numberDispatch({ type: 'set', payload: parseInt(inputNumber) })
+    numberDispatch({ type: 'set_target', payload: parseInt(inputNumber) })
     resetInput()
     navigation.navigate('Game')
   }
