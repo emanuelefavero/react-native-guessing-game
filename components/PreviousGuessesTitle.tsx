@@ -1,9 +1,13 @@
 import { Text, StyleSheet } from 'react-native'
+import { useNumber } from '@/context/NumberContext'
 
 export default function PreviousGuessesTitle() {
+  const { previousGuesses } = useNumber()
+
   return (
     <Text style={styles.title}>
-      Guesses: <Text style={styles.numberOfGuesses}>3</Text>
+      Guesses:{' '}
+      <Text style={styles.numberOfGuesses}>{previousGuesses.length}</Text>
     </Text>
   )
 }
