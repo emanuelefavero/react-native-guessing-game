@@ -11,7 +11,7 @@ import { useNumber, useNumberDispatch } from '@/context/NumberContext'
 
 export default function StartGameScreen({ navigation }: GameScreenProps) {
   const { guess, found, target } = useNumber()
-  const dispatch = useNumberDispatch()
+  const numberDispatch = useNumberDispatch()
 
   useEffect(() => {
     if (found) {
@@ -30,7 +30,7 @@ export default function StartGameScreen({ navigation }: GameScreenProps) {
       return
     }
 
-    dispatch({ type: 'lower' })
+    numberDispatch({ type: 'lower' })
   }
 
   const handleHigher = () => {
@@ -44,7 +44,12 @@ export default function StartGameScreen({ navigation }: GameScreenProps) {
       return
     }
 
-    dispatch({ type: 'higher' })
+    numberDispatch({ type: 'higher' })
+  }
+
+  const handleRestartGame = () => {
+    numberDispatch({ type: 'reset' })
+    navigation.navigate('StartGame')
   }
 
   return (
@@ -68,8 +73,8 @@ export default function StartGameScreen({ navigation }: GameScreenProps) {
         }}
       >
         <Button
-          title='End Game Now'
-          onPress={() => navigation.navigate('GameOver')}
+          title='Restart Game'
+          onPress={handleRestartGame}
           color='#fef9c3'
         />
       </View>
