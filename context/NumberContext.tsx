@@ -56,13 +56,7 @@ function numberReducer(state: NumberState, action: NumberAction): NumberState {
         min: 1,
         max: 100,
         guess: firstGuess,
-        previousGuesses: [
-          {
-            id: '1',
-            value: firstGuess,
-            sign: getPreviousGuessSign(firstGuess, action.payload),
-          },
-        ],
+        previousGuesses: [],
         found: false,
       }
 
@@ -79,8 +73,8 @@ function numberReducer(state: NumberState, action: NumberAction): NumberState {
           ...state.previousGuesses,
           {
             id: state.previousGuesses.length + 1 + '',
-            value: newGuess,
-            sign: getPreviousGuessSign(newGuess, state.target),
+            value: state.guess,
+            sign: getPreviousGuessSign(state.guess, state.target),
           },
         ],
         found,
@@ -99,8 +93,8 @@ function numberReducer(state: NumberState, action: NumberAction): NumberState {
           ...state.previousGuesses,
           {
             id: state.previousGuesses.length + 1 + '',
-            value: newGuess2,
-            sign: getPreviousGuessSign(newGuess2, state.target),
+            value: state.guess,
+            sign: getPreviousGuessSign(state.guess, state.target),
           },
         ],
         found: found2,
