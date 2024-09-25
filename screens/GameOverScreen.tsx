@@ -15,7 +15,17 @@ export default function GameOverScreen({ navigation }: GameOverScreenProps) {
     <View style={globalStyles.screenContainer}>
       <Text>Game Over Screen</Text>
 
-      <Button title='Restart Game' onPress={handleRestartGame} />
+      <View
+        style={{
+          marginBottom: 6,
+        }}
+      >
+        <Button
+          title='Restart Game'
+          onPress={handleRestartGame}
+          color='#fef9c3'
+        />
+      </View>
     </View>
   )
 }
