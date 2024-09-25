@@ -23,7 +23,7 @@ type NumberAction =
 
 type NumberContextType = {
   state: NumberState
-  action: Dispatch<NumberAction>
+  dispatch: Dispatch<NumberAction>
 }
 
 const initialState: NumberState = {
@@ -84,18 +84,13 @@ function numberReducer(state: NumberState, action: NumberAction): NumberState {
 }
 
 const NumberContext = createContext<NumberContextType | undefined>(undefined)
-const NumberDispatchContext = createContext<Dispatch<NumberAction> | undefined>(
-  undefined
-)
 
 export function NumberProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(numberReducer, initialState)
 
   return (
-    <NumberContext.Provider value={{ state, action: dispatch }}>
-      <NumberDispatchContext.Provider value={dispatch}>
-        {children}
-      </NumberDispatchContext.Provider>
+    <NumberContext.Provider value={{ state, dispatch }}>
+      {children}
     </NumberContext.Provider>
   )
 }
@@ -109,15 +104,16 @@ export function useNumber() {
 }
 
 export function useNumberDispatch() {
-  const context = useContext(NumberDispatchContext)
+  const context = useContext(NumberContext)
   if (context === undefined) {
     throw new Error('useNumberDispatch must be used within a NumberProvider')
   }
-  return context
+  return context.dispatch
 }
 
 // Usage example:
+
 // import { useNumber, useNumberDispatch } from '@/context/NumberContext'
 // const { target } = useNumber()
 // const dispatch = useNumberDispatch()
-// dispatch({ type: 'set', payload: 10 })
+// dispatch({ type: 'set_target', payload: 50 })
