@@ -1,11 +1,9 @@
 import { View, StyleSheet } from 'react-native'
 import PreviousGuess from '@/components/PreviousGuess'
+import { useNumber } from '@/context/NumberContext'
 
 export default function PreviousGuessesList() {
-  const previousGuesses = [
-    { id: '1', value: 50, sign: '-' },
-    { id: '2', value: 75, sign: '+' },
-  ]
+  const { previousGuesses } = useNumber()
 
   return (
     <View style={styles.list}>

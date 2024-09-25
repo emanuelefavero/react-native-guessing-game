@@ -6,12 +6,18 @@ import React, {
   Dispatch,
 } from 'react'
 
+type PreviousGuess = {
+  id: string
+  value: number
+  sign: string
+}
+
 type NumberState = {
   target: number
   min: number
   max: number
   guess: number
-  previousGuesses: number[]
+  previousGuesses: PreviousGuess[]
   found: boolean
 }
 
@@ -31,20 +37,32 @@ const initialState: NumberState = {
   min: 1,
   max: 100,
   guess: 50,
-  previousGuesses: [50],
+  previousGuesses: [],
   found: false,
+}
+
+function getPreviousGuessSign(guess: number, target: number) {
+  return guess === target ? '' : guess < target ? '+' : '-'
 }
 
 function numberReducer(state: NumberState, action: NumberAction): NumberState {
   switch (action.type) {
     case 'set_target':
+      const firstGuess = Math.floor((1 + 100) / 2)
+
       return {
         ...state,
         target: action.payload,
         min: 1,
         max: 100,
-        guess: Math.floor((1 + 100) / 2),
-        previousGuesses: [Math.floor((1 + 100) / 2)],
+        guess: firstGuess,
+        previousGuesses: [
+          {
+            id: '1',
+            value: firstGuess,
+            sign: getPreviousGuessSign(firstGuess, action.payload),
+          },
+        ],
         found: false,
       }
 
@@ -57,7 +75,14 @@ function numberReducer(state: NumberState, action: NumberAction): NumberState {
         ...state,
         max: newMax,
         guess: newGuess,
-        previousGuesses: [...state.previousGuesses, newGuess],
+        previousGuesses: [
+          ...state.previousGuesses,
+          {
+            id: state.previousGuesses.length + 1 + '',
+            value: newGuess,
+            sign: getPreviousGuessSign(newGuess, state.target),
+          },
+        ],
         found,
       }
 
@@ -70,7 +95,14 @@ function numberReducer(state: NumberState, action: NumberAction): NumberState {
         ...state,
         min: newMin,
         guess: newGuess2,
-        previousGuesses: [...state.previousGuesses, newGuess2],
+        previousGuesses: [
+          ...state.previousGuesses,
+          {
+            id: state.previousGuesses.length + 1 + '',
+            value: newGuess2,
+            sign: getPreviousGuessSign(newGuess2, state.target),
+          },
+        ],
         found: found2,
       }
 
