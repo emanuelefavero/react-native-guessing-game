@@ -40,7 +40,7 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
       <Input />
 
       <ButtonsContainer>
-        <PrimaryButton onPress={() => resetInput()}>Reset</PrimaryButton>
+        <PrimaryButton onPress={resetInput}>Reset</PrimaryButton>
         <PrimaryButton onPress={handleConfirm}>Confirm</PrimaryButton>
       </ButtonsContainer>
     </View>
