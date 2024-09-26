@@ -42,7 +42,7 @@ const initialState: NumberState = {
 }
 
 function getPreviousGuessSign(guess: number, target: number) {
-  return guess === target ? '' : guess < target ? '+' : '-'
+  return guess === target ? '' : guess < target ? '-' : '+'
 }
 
 function numberReducer(state: NumberState, action: NumberAction): NumberState {
