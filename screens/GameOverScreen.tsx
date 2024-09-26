@@ -2,6 +2,8 @@ import { View, Button, Image, StyleSheet } from 'react-native'
 import { globalStyles } from '@/styles/globalStyles'
 import { GameOverScreenProps } from '@/types/screens'
 import { useNumberDispatch } from '@/context/NumberContext'
+import Title from '@/components/Title'
+import GuessedNumber from '@/components/GuessedNumber'
 
 export default function GameOverScreen({ navigation }: GameOverScreenProps) {
   const numberDispatch = useNumberDispatch()
@@ -17,6 +19,10 @@ export default function GameOverScreen({ navigation }: GameOverScreenProps) {
         style={styles.gameOverImage}
         source={require('@/assets/images/game-over.png')}
       />
+
+      <Title>
+        Your number is <GuessedNumber />!
+      </Title>
 
       <View
         style={{
