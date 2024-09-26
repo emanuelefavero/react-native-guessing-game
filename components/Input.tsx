@@ -13,7 +13,7 @@ export default function Input() {
       value={inputNumber}
       onChangeText={(text) =>
         inputNumberDispatch({
-          type: 'setInputNumber',
+          type: 'set',
           payload: text.replace(/[^0-9]/g, ''),
         })
       }
