@@ -48,6 +48,9 @@ function getPreviousGuessSign(guess: number, target: number) {
 function numberReducer(state: NumberState, action: NumberAction): NumberState {
   switch (action.type) {
     case 'set_target':
+      // Random first guess
+      // const firstGuess = Math.floor(Math.random() * 100) + 1
+
       const firstGuess = Math.floor((1 + 100) / 2)
       const found = firstGuess === action.payload
 
