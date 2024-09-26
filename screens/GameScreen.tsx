@@ -54,7 +54,7 @@ export default function StartGameScreen({ navigation }: GameScreenProps) {
 
   return (
     <View style={globalStyles.screenContainer}>
-      <Title>
+      <Title fontSize={48}>
         Is your number lower or higher than <GuessedNumber />?
       </Title>
 
