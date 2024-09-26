@@ -1,4 +1,4 @@
-import { Text, View, Button } from 'react-native'
+import { View, Button, Image, StyleSheet } from 'react-native'
 import { globalStyles } from '@/styles/globalStyles'
 import { GameOverScreenProps } from '@/types/screens'
 import { useNumberDispatch } from '@/context/NumberContext'
@@ -13,7 +13,10 @@ export default function GameOverScreen({ navigation }: GameOverScreenProps) {
 
   return (
     <View style={globalStyles.screenContainer}>
-      <Text>Game Over Screen</Text>
+      <Image
+        style={styles.gameOverImage}
+        source={require('@/assets/images/game-over.png')}
+      />
 
       <View
         style={{
@@ -29,3 +32,11 @@ export default function GameOverScreen({ navigation }: GameOverScreenProps) {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  gameOverImage: {
+    width: 200,
+    height: 200,
+    marginBottom: 20,
+  },
+})
