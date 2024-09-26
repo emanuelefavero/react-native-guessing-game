@@ -7,7 +7,7 @@ export default function PreviousGuessesTitle() {
   return (
     <Text style={styles.title}>
       Guesses:{' '}
-      <Text style={styles.numberOfGuesses}>{previousGuesses.length}</Text>
+      <Text style={styles.numberOfGuesses}>{previousGuesses.length + 1}</Text>
     </Text>
   )
 }
