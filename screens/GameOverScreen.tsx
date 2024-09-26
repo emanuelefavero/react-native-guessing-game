@@ -4,6 +4,7 @@ import { GameOverScreenProps } from '@/types/screens'
 import { useNumberDispatch } from '@/context/NumberContext'
 import Title from '@/components/Title'
 import GuessedNumber from '@/components/GuessedNumber'
+import PrimaryButton from '@/components/PrimaryButton'
 
 export default function GameOverScreen({ navigation }: GameOverScreenProps) {
   const numberDispatch = useNumberDispatch()
@@ -24,17 +25,7 @@ export default function GameOverScreen({ navigation }: GameOverScreenProps) {
         Your number is <GuessedNumber />!
       </Title>
 
-      <View
-        style={{
-          marginBottom: 6,
-        }}
-      >
-        <Button
-          title='Restart Game'
-          onPress={handleRestartGame}
-          color='#fef9c3'
-        />
-      </View>
+      <PrimaryButton onPress={handleRestartGame}>Play Again</PrimaryButton>
     </View>
   )
 }
