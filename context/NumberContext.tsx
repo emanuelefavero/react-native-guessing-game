@@ -49,6 +49,7 @@ function numberReducer(state: NumberState, action: NumberAction): NumberState {
   switch (action.type) {
     case 'set_target':
       const firstGuess = Math.floor((1 + 100) / 2)
+      const found = firstGuess === action.payload
 
       return {
         ...state,
@@ -57,13 +58,13 @@ function numberReducer(state: NumberState, action: NumberAction): NumberState {
         max: 100,
         guess: firstGuess,
         previousGuesses: [],
-        found: false,
+        found,
       }
 
     case 'lower':
       const newMax = state.guess - 1
       const newGuess = Math.floor((state.min + newMax) / 2)
-      const found = newGuess === state.target
+      const found2 = newGuess === state.target
 
       return {
         ...state,
@@ -77,13 +78,13 @@ function numberReducer(state: NumberState, action: NumberAction): NumberState {
             sign: getPreviousGuessSign(state.guess, state.target),
           },
         ],
-        found,
+        found: found2,
       }
 
     case 'higher':
       const newMin = state.guess + 1
       const newGuess2 = Math.floor((newMin + state.max) / 2)
-      const found2 = newGuess2 === state.target
+      const found3 = newGuess2 === state.target
 
       return {
         ...state,
@@ -97,7 +98,7 @@ function numberReducer(state: NumberState, action: NumberAction): NumberState {
             sign: getPreviousGuessSign(state.guess, state.target),
           },
         ],
-        found: found2,
+        found: found3,
       }
 
     case 'reset':
