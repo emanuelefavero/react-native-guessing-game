@@ -5,7 +5,7 @@ import { useNumberDispatch } from '@/context/NumberContext'
 import Title from '@/components/Title'
 import GuessedNumber from '@/components/GuessedNumber'
 import PrimaryButton from '@/components/PrimaryButton'
-import PreviousGuessesTitle from '@/components/PreviousGuessesTitle'
+import FinalGuesses from '@/components/FinalGuesses'
 
 export default function GameOverScreen({ navigation }: GameOverScreenProps) {
   const numberDispatch = useNumberDispatch()
@@ -26,7 +26,7 @@ export default function GameOverScreen({ navigation }: GameOverScreenProps) {
         Your number is <GuessedNumber />!
       </Title>
 
-      <PreviousGuessesTitle />
+      <FinalGuesses />
 
       <PrimaryButton onPress={handleRestartGame}>Play Again</PrimaryButton>
     </View>
