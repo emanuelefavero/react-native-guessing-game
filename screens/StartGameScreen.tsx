@@ -1,4 +1,4 @@
-import { View } from 'react-native'
+import { View, Alert } from 'react-native'
 import { globalStyles } from '@/styles/globalStyles'
 import { useNumberDispatch } from '@/context/NumberContext'
 import {
@@ -22,11 +22,18 @@ export default function StartGameScreen({ navigation }: StartGameScreenProps) {
 
   const handleConfirm = () => {
     // Validate input
-    // TODO: Add a toast message for invalid input
-    if (inputNumber === '') return
-    if (parseInt(inputNumber) < 1 || parseInt(inputNumber) > 100) return
-    if (isNaN(parseInt(inputNumber))) return
-    if (parseInt(inputNumber) % 1 !== 0) return
+    if (
+      inputNumber === '' || // empty
+      parseInt(inputNumber) < 1 || // less than 1
+      parseInt(inputNumber) > 100 || // greater than 100
+      isNaN(parseInt(inputNumber)) || // not a number
+      parseInt(inputNumber) % 1 !== 0 // not an integer
+    ) {
+      Alert.alert('Invalid input', 'Please enter a number between 1 and 100', [
+        { text: 'OK' },
+      ])
+      return
+    }
 
     numberDispatch({ type: 'set_target', payload: parseInt(inputNumber) })
     resetInput()
