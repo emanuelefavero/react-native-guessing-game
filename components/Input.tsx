@@ -22,7 +22,7 @@ export default function Input() {
       keyboardType='numeric'
       keyboardAppearance='dark'
       placeholder='Type a number'
-      placeholderTextColor='#FDA4AF'
+      placeholderTextColor={colors.input.placeholder}
     />
   )
 }

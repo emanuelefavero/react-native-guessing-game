@@ -7,6 +7,10 @@ const button = {
   shadow: '#4C0519',
 }
 
+const input = {
+  placeholder: '#FDA4AF',
+}
+
 const circle = {
   background: '#A16207',
   border: 'rgba(234, 178, 8, 0.7)',
@@ -22,8 +26,9 @@ const sign = {
 export const colors = {
   text,
   background,
-  button,
   primary,
+  button,
+  input,
   circle,
   sign,
 }
