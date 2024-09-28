@@ -16,7 +16,7 @@ export default function FinalGuesses() {
 
 const styles = StyleSheet.create({
   title: {
-    color: colors.primaryText,
+    color: colors.text,
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',

@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    color: colors.primaryText,
+    color: colors.text,
     fontFamily: 'Lobster',
     fontWeight: 'bold',
     textAlign: 'center',

@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
   input: {
     paddingVertical: 6,
     fontSize: 30,
-    borderBottomColor: colors.primaryText,
-    color: colors.primaryText,
+    borderBottomColor: colors.text,
+    color: colors.text,
     borderBottomWidth: 1.2,
     marginBottom: 30,
     maxWidth: 215,
