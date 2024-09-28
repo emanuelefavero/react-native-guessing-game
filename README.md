@@ -1,10 +1,10 @@
-# React Native Mini Game
+# React Native Guessing Game
 
 ![mockup](./mockup.jpeg 'mockup')
 
 ## Description
 
-This is a mini guessing game built with [React Native](https://reactnative.dev/) and [Expo](https://docs.expo.dev/). The game is simple, you have to input a number between 1 and 100 and the app will try to guess it. You can tell the app if the number is higher or lower than the guess and the app will adjust its guess accordingly.
+This is a guessing game built with [React Native](https://reactnative.dev/) and [Expo](https://docs.expo.dev/). The game is simple, you have to input a number between 1 and 100 and the app will try to guess it. You can tell the app if the number is higher or lower than the guess and the app will adjust its guess accordingly.
 
 > Note: The app is still in development...
 
