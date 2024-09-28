@@ -1,4 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native'
+import { colors } from '@/styles/colors'
 
 interface Props {
   item: {
@@ -40,10 +41,10 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: '#A16207',
-    borderColor: 'rgba(234, 178, 8, 0.7)',
+    backgroundColor: colors.circle.background,
+    borderColor: colors.circle.border,
     borderWidth: 1.1,
-    shadowColor: 'rgba(76, 5, 25, 0.6)',
+    shadowColor: colors.circle.shadow,
     shadowOffset: {
       width: 1,
       height: 2,
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    color: '#fef9c3',
+    color: colors.circle.text,
     fontSize: 24,
     textAlign: 'center',
   },
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
   sign: {
     fontSize: 24,
     fontWeight: 'bold',
-    textShadowColor: 'rgba(76, 5, 25, 0.6)',
+    textShadowColor: colors.circle.shadow,
     textShadowOffset: {
       width: 1,
       height: 2,
