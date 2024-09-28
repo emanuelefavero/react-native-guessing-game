@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
 
   title: {
     color: colors.text,
-    fontFamily: 'Lobster',
+    fontFamily: font.family.lobster,
     fontWeight: 'bold',
     textAlign: 'center',
   },

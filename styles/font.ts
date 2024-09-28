@@ -7,6 +7,11 @@ const sizes = {
   xxl: 54,
 }
 
+const family = {
+  lobster: 'Lobster',
+}
+
 export const font = {
   sizes,
+  family,
 }
