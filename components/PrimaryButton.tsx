@@ -1,4 +1,5 @@
 import { Pressable, Text, StyleSheet } from 'react-native'
+import { colors } from '@/styles/colors'
 
 interface Props {
   children: string
@@ -21,7 +22,7 @@ export default function PrimaryButton({ children, onPress }: Props) {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#9F1239',
+    backgroundColor: colors.buttonBackground,
     borderRadius: 30,
     paddingVertical: 12,
     paddingHorizontal: 30,
