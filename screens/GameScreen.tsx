@@ -8,6 +8,7 @@ import ButtonsContainer from '@/components/ButtonsContainer'
 import PrimaryButton from '@/components/PrimaryButton'
 import PreviousGuesses from '@/components/PreviousGuesses'
 import { useNumber, useNumberDispatch } from '@/context/NumberContext'
+import { colors } from '@/styles/colors'
 
 export default function StartGameScreen({ navigation }: GameScreenProps) {
   const { guess, found, target } = useNumber()
@@ -75,7 +76,7 @@ export default function StartGameScreen({ navigation }: GameScreenProps) {
         <Button
           title='Restart Game'
           onPress={handleRestartGame}
-          color='#fef9c3'
+          color={colors.circle.text}
         />
       </View>
     </View>
