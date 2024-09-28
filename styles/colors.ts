@@ -1,8 +1,12 @@
 const text = '#FFE4E6'
 const background = '#BE123C'
-const buttonBackground = '#9F1239'
-const buttonShadow = '#4C0519'
 const primary = '#FDE047'
+
+const button = {
+  background: '#9F1239',
+  shadow: '#4C0519',
+}
+
 const circle = {
   background: '#A16207',
   border: 'rgba(234, 178, 8, 0.7)',
@@ -13,8 +17,7 @@ const circle = {
 export const colors = {
   text,
   background,
-  buttonBackground,
-  buttonShadow,
+  button,
   primary,
   circle,
 }

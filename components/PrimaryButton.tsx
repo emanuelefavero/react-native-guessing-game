@@ -22,11 +22,11 @@ export default function PrimaryButton({ children, onPress }: Props) {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: colors.buttonBackground,
+    backgroundColor: colors.button.background,
     borderRadius: 30,
     paddingVertical: 12,
     paddingHorizontal: 30,
-    shadowColor: colors.buttonShadow,
+    shadowColor: colors.button.shadow,
     shadowOffset: { width: 3, height: 3 },
     shadowOpacity: 0.8,
     shadowRadius: 0.5,
