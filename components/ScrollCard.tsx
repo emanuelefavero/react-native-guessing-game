@@ -13,8 +13,8 @@ export default function ScrollCard({ children }: { children: ReactNode }) {
 const styles = StyleSheet.create({
   card: {
     width: '100%',
-    backgroundColor: colors.shadow10,
-    borderColor: colors.shadow20,
+    backgroundColor: colors.shadow.light,
+    borderColor: colors.shadow.medium,
     borderWidth: 1.2,
     borderRadius: 16,
     paddingVertical: 40,
