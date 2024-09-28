@@ -1,5 +1,6 @@
 import { Pressable, Text, StyleSheet } from 'react-native'
 import { colors } from '@/styles/colors'
+import { font } from '@/styles/font'
 
 interface Props {
   children: string
@@ -31,9 +32,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 0.5,
   },
+
   buttonText: {
     color: 'white',
-    fontSize: 18,
+    fontSize: font.sizes.button,
     textTransform: 'uppercase',
   },
 })

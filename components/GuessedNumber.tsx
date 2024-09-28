@@ -1,6 +1,7 @@
 import { Text, StyleSheet } from 'react-native'
 import { useNumber } from '@/context/NumberContext'
 import { colors } from '@/styles/colors'
+import { font } from '@/styles/font'
 
 export default function GuessedNumber() {
   const { guess } = useNumber()
@@ -9,7 +10,7 @@ export default function GuessedNumber() {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 54,
+    fontSize: font.sizes.xxl,
     color: colors.primary,
   },
 })

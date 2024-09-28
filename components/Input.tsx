@@ -4,6 +4,7 @@ import {
   useInputNumberDispatch,
 } from '@/context/InputNumberContext'
 import { colors } from '@/styles/colors'
+import { font } from '@/styles/font'
 
 export default function Input() {
   const { inputNumber } = useInputNumber()
@@ -30,7 +31,7 @@ export default function Input() {
 const styles = StyleSheet.create({
   input: {
     paddingVertical: 6,
-    fontSize: 30,
+    fontSize: font.sizes.large,
     borderBottomColor: colors.input.border,
     color: colors.input.text,
     borderBottomWidth: 1.2,

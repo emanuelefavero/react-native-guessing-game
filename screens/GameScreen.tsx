@@ -9,6 +9,7 @@ import PrimaryButton from '@/components/PrimaryButton'
 import PreviousGuesses from '@/components/PreviousGuesses'
 import { useNumber, useNumberDispatch } from '@/context/NumberContext'
 import { colors } from '@/styles/colors'
+import { font } from '@/styles/font'
 
 export default function StartGameScreen({ navigation }: GameScreenProps) {
   const { guess, found, target } = useNumber()
@@ -55,7 +56,7 @@ export default function StartGameScreen({ navigation }: GameScreenProps) {
 
   return (
     <View style={globalStyles.screenContainer}>
-      <Title fontSize={48}>
+      <Title fontSize={font.sizes.xl}>
         Is your number lower or higher than <GuessedNumber />?
       </Title>
 

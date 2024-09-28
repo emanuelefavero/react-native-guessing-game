@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native'
 import { colors } from '@/styles/colors'
+import { font } from '@/styles/font'
 
 interface Props {
   item: {
@@ -57,12 +58,12 @@ const styles = StyleSheet.create({
 
   text: {
     color: colors.circle.text,
-    fontSize: 24,
+    fontSize: font.sizes.medium,
     textAlign: 'center',
   },
 
   sign: {
-    fontSize: 24,
+    fontSize: font.sizes.medium,
     fontWeight: 'bold',
     textShadowColor: colors.circle.shadow,
     textShadowOffset: {

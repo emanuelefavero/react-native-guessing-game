@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { colors } from '@/styles/colors'
+import { font } from '@/styles/font'
 
 interface Props {
   children: ReactNode
@@ -14,7 +15,7 @@ export default function Title({ children, fontSize }: Props) {
         style={[
           styles.title,
           {
-            fontSize: fontSize || 54,
+            fontSize: fontSize || font.sizes.xxl,
           },
         ]}
       >
