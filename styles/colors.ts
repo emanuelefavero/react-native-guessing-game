@@ -9,6 +9,8 @@ const button = {
 
 const input = {
   placeholder: '#FDA4AF',
+  text: text,
+  border: text,
 }
 
 const circle = {
