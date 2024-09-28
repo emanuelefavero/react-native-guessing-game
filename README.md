@@ -4,9 +4,11 @@
 
 ## Description
 
-This is a guessing game iOS application built with [React Native](https://reactnative.dev/) and [Expo](https://docs.expo.dev/). The game is simple, you have to input a number between 1 and 100 and the app will try to guess it. You can tell the app if the number is higher or lower than the guess and the app will adjust its guess accordingly.
+This is a guessing game iOS application built with [React Native](https://reactnative.dev/) and [Expo](https://docs.expo.dev/).
 
-> Note: The app is still in development...
+The goal is simple: input a number between 1 and 100, and the app will try to guess it. You provide feedback on whether the guess is higher or lower than your number, and the game adjusts its guesses accordingly, powered by a binary search algorithm.
+
+> Note: Thanks to the binary search algorithm, the number will be guessed in no more than 7 tries. The game also tracks and displays the number of attempts it took to arrive at the correct answer, offering real-time feedback during gameplay.
 
 ## Installation
 
