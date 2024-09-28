@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import { ScrollView, StyleSheet } from 'react-native'
+import { colors } from '@/styles/colors'
 
 export default function ScrollCard({ children }: { children: ReactNode }) {
   return (
@@ -12,8 +13,8 @@ export default function ScrollCard({ children }: { children: ReactNode }) {
 const styles = StyleSheet.create({
   card: {
     width: '100%',
-    backgroundColor: 'rgba(76, 5, 25, 0.1)',
-    borderColor: 'rgba(76, 5, 25, 0.2)',
+    backgroundColor: colors.shadow10,
+    borderColor: colors.shadow20,
     borderWidth: 1.2,
     borderRadius: 16,
     paddingVertical: 40,

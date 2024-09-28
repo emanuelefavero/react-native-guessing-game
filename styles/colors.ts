@@ -1,10 +1,14 @@
 const text = '#FFE4E6'
 const background = '#BE123C'
 const primary = '#FDE047'
+const shadow = 'rgb(76, 5, 25)'
+const shadow10 = 'rgba(76, 5, 25, 0.1)'
+const shadow20 = 'rgba(76, 5, 25, 0.2)'
+const shadow60 = 'rgba(76, 5, 25, 0.6)'
 
 const button = {
   background: '#9F1239',
-  shadow: '#4C0519',
+  shadow: shadow,
 }
 
 const input = {
@@ -17,7 +21,7 @@ const circle = {
   background: '#A16207',
   border: 'rgba(234, 178, 8, 0.7)',
   text: '#fef9c3',
-  shadow: 'rgba(76, 5, 25, 0.6)',
+  shadow: shadow60,
 }
 
 const sign = {
@@ -29,6 +33,10 @@ export const colors = {
   text,
   background,
   primary,
+  shadow,
+  shadow10,
+  shadow20,
+  shadow60,
   button,
   input,
   circle,
