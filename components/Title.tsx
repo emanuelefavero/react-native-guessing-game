@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { colors } from '@/styles/colors'
 import { font } from '@/styles/font'
+import { maxWidth } from '@/styles/maxWidth'
 
 interface Props {
   children: ReactNode
@@ -28,7 +29,7 @@ export default function Title({ children, fontSize }: Props) {
 const styles = StyleSheet.create({
   titleContainer: {
     width: '100%',
-    maxWidth: 360,
+    maxWidth: maxWidth.title,
     marginBottom: 36,
   },
 

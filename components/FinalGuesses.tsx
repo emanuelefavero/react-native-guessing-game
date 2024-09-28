@@ -2,6 +2,7 @@ import { Text, StyleSheet } from 'react-native'
 import { useNumber } from '@/context/NumberContext'
 import { colors } from '@/styles/colors'
 import { font } from '@/styles/font'
+import { maxWidth } from '@/styles/maxWidth'
 
 export default function FinalGuesses() {
   const { previousGuesses } = useNumber()
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 30,
-    maxWidth: 300,
+    maxWidth: maxWidth.text,
   },
 
   numberOfGuesses: {

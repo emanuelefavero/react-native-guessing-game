@@ -5,6 +5,7 @@ import {
 } from '@/context/InputNumberContext'
 import { colors } from '@/styles/colors'
 import { font } from '@/styles/font'
+import { maxWidth } from '@/styles/maxWidth'
 
 export default function Input() {
   const { inputNumber } = useInputNumber()
@@ -36,6 +37,6 @@ const styles = StyleSheet.create({
     color: colors.input.text,
     borderBottomWidth: 1.2,
     marginBottom: 30,
-    maxWidth: 215,
+    maxWidth: maxWidth.input,
   },
 })

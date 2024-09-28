@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import { View, StyleSheet } from 'react-native'
+import { maxWidth } from '@/styles/maxWidth'
 
 export default function ButtonsContainer({
   children,
@@ -14,7 +15,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '100%',
-    maxWidth: 285,
+    maxWidth: maxWidth.buttons,
     marginBottom: 36,
   },
 })
