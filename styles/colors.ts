@@ -14,10 +14,16 @@ const circle = {
   shadow: 'rgba(76, 5, 25, 0.6)',
 }
 
+const sign = {
+  plus: '#16A34A',
+  minus: '#F59E0B',
+}
+
 export const colors = {
   text,
   background,
   button,
   primary,
   circle,
+  sign,
 }

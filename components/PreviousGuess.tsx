@@ -20,7 +20,7 @@ export default function PreviousGuess({ item }: Props) {
         style={[
           styles.sign,
           {
-            color: item.sign === '+' ? '#16A34A' : '#F59E0B',
+            color: item.sign === '+' ? colors.sign.plus : colors.sign.minus,
           },
         ]}
       >
