@@ -1,5 +1,6 @@
 import { Text, StyleSheet } from 'react-native'
 import { useNumber } from '@/context/NumberContext'
+import { colors } from '@/styles/colors'
 
 export default function PreviousGuessesTitle() {
   const { previousGuesses } = useNumber()
@@ -14,7 +15,7 @@ export default function PreviousGuessesTitle() {
 
 const styles = StyleSheet.create({
   title: {
-    color: '#FFE4E6',
+    color: colors.primaryText,
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',

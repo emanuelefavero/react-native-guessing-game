@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import { colors } from '@/styles/colors'
 
 interface Props {
   children: ReactNode
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    color: '#FFE4E6',
+    color: colors.primaryText,
     fontFamily: 'Lobster',
     fontWeight: 'bold',
     textAlign: 'center',
