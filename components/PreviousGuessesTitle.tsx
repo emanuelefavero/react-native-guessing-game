@@ -23,6 +23,6 @@ const styles = StyleSheet.create({
   },
 
   numberOfGuesses: {
-    color: '#FDE047',
+    color: colors.primary,
   },
 })
